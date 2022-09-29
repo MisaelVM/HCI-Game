@@ -296,13 +296,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   partyMembersPrefabs:
-  - {fileID: 3647590532740692178, guid: ece3654fecbbf2f488ee5b2f6657bc93, type: 3}
-  - {fileID: 3647590532740692178, guid: 2f646fd40284e4c46b67df19b7f82a59, type: 3}
-  - {fileID: 3647590532740692178, guid: e55d080a6f31e0a428fbe597a76c89c8, type: 3}
+  - {fileID: 2412180722732540100, guid: c0c93b0740e78e74e9c3deac985a6a56, type: 3}
   enemyMembersPrefabs:
   - {fileID: 4481098907978497605, guid: 49e75fb2e187eb14cbbeb60ce1fc2db9, type: 3}
-  - {fileID: 4481098907978497605, guid: e90718429af345c4ea6fd18cf178b5da, type: 3}
-  - {fileID: 4481098907978497605, guid: 19a10685276efcc4ca1b6c86008c2cc0, type: 3}
   partyBattleStation: {fileID: 1747531124}
   enemyBattleStation: {fileID: 23338106}
 --- !u!1 &197616920

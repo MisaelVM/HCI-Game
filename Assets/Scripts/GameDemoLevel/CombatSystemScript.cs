@@ -141,7 +141,8 @@ public class CombatSystemScript : MonoBehaviour
     }
 
     void PartyAttack(int partyMemberIndex, int enemyMemberIndex) {
-        int damage = enemyMembersAttributes[enemyMemberIndex].TakeDamage(partyMembersAttributes[partyMemberIndex]);
+        int damage = partyMembersAttributes[partyMemberIndex].AttackEnemy(enemyMembersAttributes[enemyMemberIndex]);
+        //int damage = enemyMembersAttributes[enemyMemberIndex].TakeDamage(partyMembersAttributes[partyMemberIndex]);
         if (enemyMembersAttributes[enemyMemberIndex].health <= 0) {
             Destroy(enemyMembersGameObjects[enemyMemberIndex]);
             enemyMembersAttributes.Remove(enemyMembersAttributes[enemyMemberIndex]);
