@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1f5dd2e8457fba646ba9d7af7dbd0e92
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fraktur BT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 255927adc388b764ca29b9ae08a85289, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

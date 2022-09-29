@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 360c15d877d0ecf4294ac0b11a7b6fbd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fraktur
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f15044c6c2caa9a4083f7cf14ef7f15e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
