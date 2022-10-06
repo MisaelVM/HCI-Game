@@ -298,7 +298,7 @@ MonoBehaviour:
   partyMembersPrefabs:
   - {fileID: 2412180722732540100, guid: c0c93b0740e78e74e9c3deac985a6a56, type: 3}
   enemyMembersPrefabs:
-  - {fileID: 4481098907978497605, guid: 49e75fb2e187eb14cbbeb60ce1fc2db9, type: 3}
+  - {fileID: 688759226479516188, guid: 4b9ad8a615175574582540f37f140f3e, type: 3}
   partyBattleStation: {fileID: 1747531124}
   enemyBattleStation: {fileID: 23338106}
 --- !u!1 &197616920

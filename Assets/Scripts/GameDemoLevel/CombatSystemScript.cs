@@ -39,7 +39,8 @@ public class CombatSystemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (state) {
+            enemyMembersAttributes[0].Die();
+        /*switch (state) {
             case BattleState.PARTYTURN:
                 PartyTurn();
                 break;
@@ -56,7 +57,7 @@ public class CombatSystemScript : MonoBehaviour
 
             default:
                 break;
-        }
+        }*/
     }
 
     void SetupEntities() {

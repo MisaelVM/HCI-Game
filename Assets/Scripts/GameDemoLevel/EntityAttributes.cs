@@ -6,8 +6,6 @@ public enum EntityAction { ATTACK, DEFEND, SPECIAL, IDLE }
 
 public class EntityAttributes : MonoBehaviour
 {
-    public Animator animator;
-
     public string entityName = "Mob";
 
     public int maxHealth = 100;
@@ -17,6 +15,8 @@ public class EntityAttributes : MonoBehaviour
     public int def = 15;
 
     public EntityAction action = EntityAction.IDLE;
+
+    private Animator animator;
 
     // Hashings for animation triggers
     private int animationHitTriggerHash = Animator.StringToHash("HitTrigger");
@@ -28,6 +28,18 @@ public class EntityAttributes : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        animator.Rebind();
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+            animator.SetTrigger(animationHitTriggerHash);
+        else if (Input.GetKeyDown(KeyCode.X))
+            animator.SetTrigger(animationDeathTriggerHash);
+        else if (Input.GetKeyDown(KeyCode.C))
+            animator.SetBool(animationApproachingEnemyHash, !animator.GetBool(animationApproachingEnemyHash));
     }
 
     public int TakeDamage(EntityAttributes attacker) {
@@ -42,16 +54,24 @@ public class EntityAttributes : MonoBehaviour
         return damage;
     }
 
+    public void Die()
+    {
+        animator.SetTrigger(animationDeathTriggerHash);
+    }
+
     public int AttackEnemy(EntityAttributes target) {
-        Vector3 initialPosition = transform.position;
+        animator.SetTrigger(animationHitTriggerHash);
+
+        return 0;
+        /*Vector3 initialPosition = transform.position;
         animator.SetBool(animationApproachingEnemyHash, true);
         MoveTowards(target.transform.position);
         int damage = target.TakeDamage(this);
         animator.SetBool(animationApproachingEnemyHash, false);
         animator.SetBool(animationRetreatingHash, true);
-        MoveTowards(initialPosition);
+        //MoveTowards(initialPosition);
         animator.SetBool(animationRetreatingHash, false);
-        return damage;
+        return damage;*/
     }
 
     private void MoveTowards(Vector3 destination) {
