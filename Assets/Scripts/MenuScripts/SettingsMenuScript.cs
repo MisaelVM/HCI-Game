@@ -46,8 +46,10 @@ public class SettingsMenuScript : MonoBehaviour
     public void SetVolume(float volume) {
         Debug.Log(volume);
         //audioMixer.SetFloat("MainMixerVolume", volume);
-        float vol = volume; // Clamp volume
-        audioWaves[0].enabled = (vol > 0);
+        // -80 0 -> -1 0 -> 0 1 -> 0 100
+        //float vol = ((volume / 80.0f) + 1.0f) * 100.0f;
+        float vol = 5.0f * volume / 4.0f + 100.0f;
+        audioWaves[0].enabled = (vol > 0.0f);
         audioWaves[1].enabled = (vol > 100.0f / 3.0f);
         audioWaves[2].enabled = (vol > 2 * 100.0f / 3.0f);
         audioMixer.SetFloat("MainMixerVolume", Mathf.Log10(volume) * 20);
